@@ -40,7 +40,9 @@ def download_replies(account, tweetid):
 @click.option("--since", help="Search from this date. Format YYYY-MM-DD", required=True)
 @click.option("--until", help="Search to this date. Format YYYY-MM-DD", required=True)
 def tweets_between(account, since, until):
-    click.echo("Downloading tweets of {} tweet from {} to {}".format(account, since, until))
+    click.echo(
+        "Downloading tweets of {} tweet from {} to {}".format(account, since, until)
+    )
     since = date.fromisoformat(since)
     until = date.fromisoformat(until)
     session.start()

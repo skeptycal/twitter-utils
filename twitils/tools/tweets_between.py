@@ -1,8 +1,6 @@
 from datetime import timedelta
 
-from twitils.tools.navigation import (
-    scroll_to_last_page,
-)
+from twitils.tools.navigation import scroll_to_last_page
 from twitils.tools.writer import write_tweet_ids
 
 
@@ -22,7 +20,7 @@ def search_query_builder(from_account, since, until):
     s = since_query_param(since)
     u = until_query_param(until)
     f = from_account_query_param(from_account)
-    return f'https://twitter.com/search?q=({f})%20{u}%20{s}&src=typed_query'
+    return f"https://twitter.com/search?q=({f})%20{u}%20{s}&src=typed_query"
 
 
 def date_range(since, until):

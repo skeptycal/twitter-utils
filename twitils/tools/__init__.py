@@ -2,7 +2,7 @@ from selenium import webdriver
 
 
 class BrowserSession:
-    def __init__(self, given_browser="firefox"):
+    def __init__(self, given_browser="chrome"):
         self.browser = given_browser
         self.session = None
 
